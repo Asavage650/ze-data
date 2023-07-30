@@ -110,13 +110,8 @@ const thoughtsController = {
         { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { runValidators: true, new: true }
       )
-      .then((thoughts) =>
-        !thoughts
-          ? res
-              .status(404)
-              .json({ message: "No thoughts found with this Id sorry!" })
-          : res.json(thought)
-      )
-      .catch((err) => res.status(500).json(err));
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.json(err));
   },
 };
+module.exports = thoughtsController;
