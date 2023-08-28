@@ -29,7 +29,7 @@ MIT
 
 ## Contributor
 
-Me
+Alexius Savage with help from TA eric hirsch.
 
 ## Tests
 
